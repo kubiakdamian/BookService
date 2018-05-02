@@ -11,10 +11,9 @@ namespace Client
     {
         static void Main(string[] args)
         {
-            ServiceDemoClient serviceDemoClient = new ServiceDemoClient();
-            Console.WriteLine(serviceDemoClient.HelloWorld());
-            Console.ReadLine();
-
+            ServiceDemoClient client = new ServiceDemoClient();
+            Console.WriteLine();
+            client.Close();
         }
     }
 }

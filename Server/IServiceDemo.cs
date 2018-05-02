@@ -7,17 +7,19 @@ using System.Text;
 
 namespace Server
 {
-    // UWAGA: możesz użyć polecenia „Zmień nazwę” w menu „Refaktoryzuj”, aby zmienić nazwę interfejsu „IServiceDemo” w kodzie i pliku konfiguracji.
     [ServiceContract]
     public interface IServiceDemo
     {
         [OperationContract]
-        string HelloWorld();
+        string ListOfBorrowedItems();
 
         [OperationContract]
-        string Hi(string name);
+        string getBorrowedBooks(int userID);
 
         [OperationContract]
-        int Sum(int a, int b);
+        BookInfo GetBookInfo(int bootID);
+
+        [OperationContract]
+        Status BorrowedBook(int bootID);
     }
 }

@@ -7,23 +7,31 @@ using System.Text;
 
 namespace Server
 {
-    // UWAGA: możesz użyć polecenia „Zmień nazwę” w menu „Refaktoryzuj”, aby zmienić nazwę klasy „ServiceDemo” w kodzie, usłudze i pliku konfiguracji.
-    // UWAGA: aby uruchomić klienta testowego WCF w celu przetestowania tej usługi, wybierz plik ServiceDemo.svc lub ServiceDemo.svc.cs w eksploratorze rozwiązań i rozpocznij debugowanie.
     public class ServiceDemo : IServiceDemo
     {
-        public string HelloWorld()
+        private List<Book> books = new List<Book>() {
+            new Book(1, new BookInfo("Pierwsza ksiazka", new DateTime(2014, 7, 11), new DateTime(2014, 10, 18)), new Status(true)),
+            new Book(2, new BookInfo("Druga ksiazka", new DateTime(2015, 8, 15), new DateTime(2015, 10, 26)), new Status(true))
+        };
+
+        public Status BorrowedBook(int bookID)
         {
-            return "Hello world!";
+            throw new NotImplementedException();
         }
 
-        public string Hi(string name)
+        public BookInfo GetBookInfo(int bookID)
         {
-            return "Hi " + name;
+            throw new NotImplementedException();
         }
 
-        public int Sum(int a, int b)
+        public string getBorrowedBooks(int userID)
         {
-            return a + b;
+            throw new NotImplementedException();
+        }
+
+        public string ListOfBorrowedItems()
+        {
+            throw new NotImplementedException();
         }
     }
 }
