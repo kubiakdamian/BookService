@@ -11,7 +11,7 @@ namespace Server
     public interface IServiceDemo
     {
         [OperationContract]
-        string ListOfBorrowedItems();
+        List<Book> ListOfBorrowedItems();
 
         [OperationContract]
         string getBorrowedBooks(int userID);

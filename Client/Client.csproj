@@ -44,6 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\BookServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\BookServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServiceDemoReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -54,6 +64,41 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\BookServiceReference2\Client.BookServiceReference2.Book.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BookServiceReference2\Client.BookServiceReference2.BookInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BookServiceReference2\Client.BookServiceReference2.Status.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BookServiceReference2\ServiceDemo.wsdl" />
+    <None Include="Connected Services\BookServiceReference2\ServiceDemo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BookServiceReference2\ServiceDemo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BookServiceReference2\ServiceDemo2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BookServiceReference\Client.BookServiceReference.BookInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BookServiceReference\Client.BookServiceReference.Status.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BookServiceReference\ServiceDemo.wsdl" />
+    <None Include="Connected Services\BookServiceReference\ServiceDemo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BookServiceReference\ServiceDemo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BookServiceReference\ServiceDemo2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceDemoReference\ServiceDemo.wsdl" />
     <None Include="Connected Services\ServiceDemoReference\ServiceDemo.xsd">
       <SubType>Designer</SubType>
@@ -66,6 +111,8 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BookServiceReference2\" />
+    <WCFMetadataStorage Include="Connected Services\BookServiceReference\" />
     <WCFMetadataStorage Include="Connected Services\ServiceDemoReference\" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +126,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceDemoReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookServiceReference\ServiceDemo.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookServiceReference2\ServiceDemo.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookServiceReference2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookServiceReference2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookServiceReference2\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

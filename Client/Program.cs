@@ -3,17 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Client.ServiceDemoReference;
+using Client.BookServiceReference2;
 
 namespace Client
 {
     class Program
     {
+        private static ServiceDemoClient client = new ServiceDemoClient();
         static void Main(string[] args)
+        {          
+            Console.WriteLine(client.GetBookInfo(2).Info + "\n");
+            PrintBorrowedElements();
+            Console.ReadLine();
+            //client.Close();
+        }
+
+        private static void PrintBorrowedElements()
         {
-            ServiceDemoClient client = new ServiceDemoClient();
-            Console.WriteLine();
-            client.Close();
+            foreach(var book in client.ListOfBorrowedItems())
+            {
+                Console.WriteLine("Book ID: " + book.BookID);
+                Console.WriteLine("Info: " + book.Info.Info.ToString());
+                Console.WriteLine("Borrow date: " + book.Info.BorrowDate.ToString("dd/MM/yyyy"));
+                Console.WriteLine("Return date: " + book.Info.ReturnDate.ToString("dd/MM/yyyy"));
+            }
         }
     }
 }

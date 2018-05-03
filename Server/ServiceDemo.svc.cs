@@ -21,7 +21,16 @@ namespace Server
 
         public BookInfo GetBookInfo(int bookID)
         {
-            throw new NotImplementedException();
+            Book chosenBook = new Book();
+            foreach(var book in books)
+            {
+                if(book.BookID == bookID)
+                {
+                    chosenBook = book;
+                }
+            }
+
+            return chosenBook.Info;
         }
 
         public string getBorrowedBooks(int userID)
@@ -29,9 +38,18 @@ namespace Server
             throw new NotImplementedException();
         }
 
-        public string ListOfBorrowedItems()
+        public List<Book> ListOfBorrowedItems()
         {
-            throw new NotImplementedException();
+            List<Book> borrowedBooks = new List<Book>();
+            foreach (var book in books)
+            {
+                if (book.Status.IsBorrowed)
+                {
+                    borrowedBooks.Add(book);
+                }
+            }
+
+            return borrowedBooks;
         }
     }
 }

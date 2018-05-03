@@ -9,9 +9,11 @@ namespace Server
     {
         private bool isBorrowed;
 
+        public bool IsBorrowed { get => isBorrowed; set => isBorrowed = value; }
+
         public Status(bool isBorrowed)
         {
-            this.isBorrowed = isBorrowed;
+            this.IsBorrowed = isBorrowed;
         }
 
         public Status()
