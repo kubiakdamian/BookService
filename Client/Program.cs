@@ -15,31 +15,73 @@ namespace Client
             Console.WriteLine(client.GetBookInfo(2).Info + "\n");
             PrintBorrowedElements();
             PrintUserBooks(1);
+            PrintBookStatus(1);
+            PrintBookStatus(51);
+
             Console.ReadLine();
-            //client.Close();
+            client.Close();
         }
 
         private static void PrintBorrowedElements()
         {
-            foreach(var book in client.ListOfBorrowedItems())
+            try
             {
-                Console.WriteLine("Book ID: " + book.BookID);
-                Console.WriteLine("Info: " + book.Info.Info.ToString());
-                Console.WriteLine("Borrow date: " + book.Info.BorrowDate.ToString("dd/MM/yyyy"));
-                Console.WriteLine("Return date: " + book.Info.ReturnDate.ToString("dd/MM/yyyy") + "\n");
+                foreach (var book in client.ListOfBorrowedItems())
+                {
+                    Console.WriteLine("Book ID: " + book.BookID);
+                    Console.WriteLine("Info: " + book.Info.Info.ToString());
+                    Console.WriteLine("Borrow date: " + book.Info.BorrowDate.ToString("dd/MM/yyyy"));
+                    Console.WriteLine("Return date: " + book.Info.ReturnDate.ToString("dd/MM/yyyy") + "\n");
+                }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Couldn't print data");
+            }
+            
         }
 
         private static void PrintUserBooks(int userID)
         {
-            Console.WriteLine("User " + userID + " books:\n");
-            foreach (var book in client.getBorrowedBooks(userID))
+            try
             {
-                Console.WriteLine("Book ID: " + book.BookID);
-                Console.WriteLine("Info: " + book.Info.Info.ToString());
-                Console.WriteLine("Borrow date: " + book.Info.BorrowDate.ToString("dd/MM/yyyy"));
-                Console.WriteLine("Return date: " + book.Info.ReturnDate.ToString("dd/MM/yyyy"));
+                Console.WriteLine("User " + userID + " books:\n");
+                foreach (var book in client.getBorrowedBooks(userID))
+                {
+                    Console.WriteLine("Book ID: " + book.BookID);
+                    Console.WriteLine("Info: " + book.Info.Info.ToString());
+                    Console.WriteLine("Borrow date: " + book.Info.BorrowDate.ToString("dd/MM/yyyy"));
+                    Console.WriteLine("Return date: " + book.Info.ReturnDate.ToString("dd/MM/yyyy" + "\n"));
+                }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Couldn't print data");
+            }
+        }
+
+        private static void PrintBookStatus(int bookID)
+        {
+            try
+            {
+                if (client.BorrowedBook(bookID).IsBorrowed)
+                {
+                    Console.WriteLine("Book is already borrowed\n");
+                }
+                else if (!client.BorrowedBook(bookID).IsBorrowed)
+                {
+                    Console.WriteLine("Book can be borrowed\n");
+                }
+                else
+                {
+                    Console.WriteLine("There is no book with id: " + bookID + "\n");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Couldn't print data");
+            }
+            
         }
     }
 }
