@@ -23,35 +23,35 @@
   <xs:element name="getBorrowedBooksResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="getBorrowedBooksResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Server" minOccurs="0" name="getBorrowedBooksResult" nillable="true" type="q2:ArrayOfBook" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetBookInfo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="bootID" type="xs:int" />
+        <xs:element minOccurs="0" name="bookID" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetBookInfoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Server" minOccurs="0" name="GetBookInfoResult" nillable="true" type="q2:BookInfo" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Server" minOccurs="0" name="GetBookInfoResult" nillable="true" type="q3:BookInfo" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="BorrowedBook">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="bootID" type="xs:int" />
+        <xs:element minOccurs="0" name="bookID" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="BorrowedBookResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Server" minOccurs="0" name="BorrowedBookResult" nillable="true" type="q3:Status" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Server" minOccurs="0" name="BorrowedBookResult" nillable="true" type="q4:Status" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

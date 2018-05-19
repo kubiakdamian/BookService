@@ -11,4 +11,4 @@ C:\Users\Damian\Desktop\BookService\Server\bin\Server.pdb
 C:\Users\Damian\Desktop\BookService\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
 C:\Users\Damian\Desktop\BookService\Server\obj\Debug\Server.dll
 C:\Users\Damian\Desktop\BookService\Server\obj\Debug\Server.pdb
-C:\Users\Damian\Desktop\BookService\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Damian\Desktop\BookService\Server\obj\Debug\Server.csprojAssemblyReference.cache

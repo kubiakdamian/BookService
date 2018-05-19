@@ -14,12 +14,12 @@ namespace Server
         List<Book> ListOfBorrowedItems();
 
         [OperationContract]
-        string getBorrowedBooks(int userID);
+        List<Book> getBorrowedBooks(int userID);
 
         [OperationContract]
-        BookInfo GetBookInfo(int bootID);
+        BookInfo GetBookInfo(int bookID);
 
         [OperationContract]
-        Status BorrowedBook(int bootID);
+        Status BorrowedBook(int bookID);
     }
 }

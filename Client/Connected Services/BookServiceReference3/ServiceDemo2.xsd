@@ -9,6 +9,7 @@
   <xs:complexType name="Book">
     <xs:sequence>
       <xs:element minOccurs="0" name="BookID" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientID" type="xs:int" />
       <xs:element minOccurs="0" name="Info" nillable="true" type="tns:BookInfo" />
       <xs:element minOccurs="0" name="Status" nillable="true" type="tns:Status" />
     </xs:sequence>

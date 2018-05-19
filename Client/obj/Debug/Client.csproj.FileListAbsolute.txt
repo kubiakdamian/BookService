@@ -8,7 +8,7 @@ C:\Users\Damian\Desktop\BookService\BookService\Client\obj\Debug\Client.pdb
 C:\Users\Damian\Desktop\BookService\Client\bin\Debug\Client.exe.config
 C:\Users\Damian\Desktop\BookService\Client\bin\Debug\Client.exe
 C:\Users\Damian\Desktop\BookService\Client\bin\Debug\Client.pdb
-C:\Users\Damian\Desktop\BookService\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\Damian\Desktop\BookService\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 C:\Users\Damian\Desktop\BookService\Client\obj\Debug\Client.exe
 C:\Users\Damian\Desktop\BookService\Client\obj\Debug\Client.pdb
+C:\Users\Damian\Desktop\BookService\Client\obj\Debug\Client.csprojAssemblyReference.cache
