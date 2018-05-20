@@ -14,10 +14,17 @@ namespace Server
             new Book(2, 0, new BookInfo("Druga ksiazka", new DateTime(2015, 8, 15), new DateTime(2015, 10, 26)), new Status(false))
         };
 
+        public List<Book> Books { get => books; set => books = value; }
+
+        public List<Book> GetBooks()
+        {
+            return books;
+        }
+
         public Status BorrowedBook(int bookID)
         {
             Book chosenBook = new Book();
-            foreach (var book in books)
+            foreach (var book in Books)
             {
                 if (book.BookID == bookID)
                 {
@@ -31,7 +38,7 @@ namespace Server
         public BookInfo GetBookInfo(int bookID)
         {
             Book chosenBook = new Book();
-            foreach(var book in books)
+            foreach(var book in Books)
             {
                 if(book.BookID == bookID)
                 {
@@ -45,7 +52,7 @@ namespace Server
         public List<Book> getBorrowedBooks(int userID)
         {
             List<Book> borrowedBooks = new List<Book>();
-            foreach (var book in books)
+            foreach (var book in Books)
             {
                 if (book.ClientID == userID)
                 {
@@ -59,7 +66,7 @@ namespace Server
         public List<Book> ListOfBorrowedItems()
         {
             List<Book> borrowedBooks = new List<Book>();
-            foreach (var book in books)
+            foreach (var book in Books)
             {
                 if (book.Status.IsBorrowed)
                 {

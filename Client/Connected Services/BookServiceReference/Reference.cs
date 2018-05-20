@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Client.BookServiceReference3 {
+namespace Client.BookServiceReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -29,10 +29,10 @@ namespace Client.BookServiceReference3 {
         private int ClientIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.BookServiceReference3.BookInfo InfoField;
+        private Client.BookServiceReference.BookInfo InfoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Client.BookServiceReference3.Status StatusField;
+        private Client.BookServiceReference.Status StatusField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -71,7 +71,7 @@ namespace Client.BookServiceReference3 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.BookServiceReference3.BookInfo Info {
+        public Client.BookServiceReference.BookInfo Info {
             get {
                 return this.InfoField;
             }
@@ -84,7 +84,7 @@ namespace Client.BookServiceReference3 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Client.BookServiceReference3.Status Status {
+        public Client.BookServiceReference.Status Status {
             get {
                 return this.StatusField;
             }
@@ -229,41 +229,47 @@ namespace Client.BookServiceReference3 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BookServiceReference3.IServiceDemo")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BookServiceReference.IServiceDemo")]
     public interface IServiceDemo {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/ListOfBorrowedItems", ReplyAction="http://tempuri.org/IServiceDemo/ListOfBorrowedItemsResponse")]
-        Client.BookServiceReference3.Book[] ListOfBorrowedItems();
+        Client.BookServiceReference.Book[] ListOfBorrowedItems();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/ListOfBorrowedItems", ReplyAction="http://tempuri.org/IServiceDemo/ListOfBorrowedItemsResponse")]
-        System.Threading.Tasks.Task<Client.BookServiceReference3.Book[]> ListOfBorrowedItemsAsync();
+        System.Threading.Tasks.Task<Client.BookServiceReference.Book[]> ListOfBorrowedItemsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/getBorrowedBooks", ReplyAction="http://tempuri.org/IServiceDemo/getBorrowedBooksResponse")]
-        Client.BookServiceReference3.Book[] getBorrowedBooks(int userID);
+        Client.BookServiceReference.Book[] getBorrowedBooks(int userID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/getBorrowedBooks", ReplyAction="http://tempuri.org/IServiceDemo/getBorrowedBooksResponse")]
-        System.Threading.Tasks.Task<Client.BookServiceReference3.Book[]> getBorrowedBooksAsync(int userID);
+        System.Threading.Tasks.Task<Client.BookServiceReference.Book[]> getBorrowedBooksAsync(int userID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/GetBookInfo", ReplyAction="http://tempuri.org/IServiceDemo/GetBookInfoResponse")]
-        Client.BookServiceReference3.BookInfo GetBookInfo(int bookID);
+        Client.BookServiceReference.BookInfo GetBookInfo(int bookID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/GetBookInfo", ReplyAction="http://tempuri.org/IServiceDemo/GetBookInfoResponse")]
-        System.Threading.Tasks.Task<Client.BookServiceReference3.BookInfo> GetBookInfoAsync(int bookID);
+        System.Threading.Tasks.Task<Client.BookServiceReference.BookInfo> GetBookInfoAsync(int bookID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/BorrowedBook", ReplyAction="http://tempuri.org/IServiceDemo/BorrowedBookResponse")]
-        Client.BookServiceReference3.Status BorrowedBook(int bookID);
+        Client.BookServiceReference.Status BorrowedBook(int bookID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/BorrowedBook", ReplyAction="http://tempuri.org/IServiceDemo/BorrowedBookResponse")]
-        System.Threading.Tasks.Task<Client.BookServiceReference3.Status> BorrowedBookAsync(int bookID);
+        System.Threading.Tasks.Task<Client.BookServiceReference.Status> BorrowedBookAsync(int bookID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/GetBooks", ReplyAction="http://tempuri.org/IServiceDemo/GetBooksResponse")]
+        Client.BookServiceReference.Book[] GetBooks();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceDemo/GetBooks", ReplyAction="http://tempuri.org/IServiceDemo/GetBooksResponse")]
+        System.Threading.Tasks.Task<Client.BookServiceReference.Book[]> GetBooksAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceDemoChannel : Client.BookServiceReference3.IServiceDemo, System.ServiceModel.IClientChannel {
+    public interface IServiceDemoChannel : Client.BookServiceReference.IServiceDemo, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceDemoClient : System.ServiceModel.ClientBase<Client.BookServiceReference3.IServiceDemo>, Client.BookServiceReference3.IServiceDemo {
+    public partial class ServiceDemoClient : System.ServiceModel.ClientBase<Client.BookServiceReference.IServiceDemo>, Client.BookServiceReference.IServiceDemo {
         
         public ServiceDemoClient() {
         }
@@ -284,36 +290,44 @@ namespace Client.BookServiceReference3 {
                 base(binding, remoteAddress) {
         }
         
-        public Client.BookServiceReference3.Book[] ListOfBorrowedItems() {
+        public Client.BookServiceReference.Book[] ListOfBorrowedItems() {
             return base.Channel.ListOfBorrowedItems();
         }
         
-        public System.Threading.Tasks.Task<Client.BookServiceReference3.Book[]> ListOfBorrowedItemsAsync() {
+        public System.Threading.Tasks.Task<Client.BookServiceReference.Book[]> ListOfBorrowedItemsAsync() {
             return base.Channel.ListOfBorrowedItemsAsync();
         }
         
-        public Client.BookServiceReference3.Book[] getBorrowedBooks(int userID) {
+        public Client.BookServiceReference.Book[] getBorrowedBooks(int userID) {
             return base.Channel.getBorrowedBooks(userID);
         }
         
-        public System.Threading.Tasks.Task<Client.BookServiceReference3.Book[]> getBorrowedBooksAsync(int userID) {
+        public System.Threading.Tasks.Task<Client.BookServiceReference.Book[]> getBorrowedBooksAsync(int userID) {
             return base.Channel.getBorrowedBooksAsync(userID);
         }
         
-        public Client.BookServiceReference3.BookInfo GetBookInfo(int bookID) {
+        public Client.BookServiceReference.BookInfo GetBookInfo(int bookID) {
             return base.Channel.GetBookInfo(bookID);
         }
         
-        public System.Threading.Tasks.Task<Client.BookServiceReference3.BookInfo> GetBookInfoAsync(int bookID) {
+        public System.Threading.Tasks.Task<Client.BookServiceReference.BookInfo> GetBookInfoAsync(int bookID) {
             return base.Channel.GetBookInfoAsync(bookID);
         }
         
-        public Client.BookServiceReference3.Status BorrowedBook(int bookID) {
+        public Client.BookServiceReference.Status BorrowedBook(int bookID) {
             return base.Channel.BorrowedBook(bookID);
         }
         
-        public System.Threading.Tasks.Task<Client.BookServiceReference3.Status> BorrowedBookAsync(int bookID) {
+        public System.Threading.Tasks.Task<Client.BookServiceReference.Status> BorrowedBookAsync(int bookID) {
             return base.Channel.BorrowedBookAsync(bookID);
+        }
+        
+        public Client.BookServiceReference.Book[] GetBooks() {
+            return base.Channel.GetBooks();
+        }
+        
+        public System.Threading.Tasks.Task<Client.BookServiceReference.Book[]> GetBooksAsync() {
+            return base.Channel.GetBooksAsync();
         }
     }
 }
